@@ -1,0 +1,26 @@
+@import "mixins";
+
+.Nav {
+  width: 100vw;
+  padding: 20px 24px;
+  @include flexCenter;
+  justify-content: space-between;
+  position: fixed;
+  @include comfortaa(13px, 500, 1.38);
+
+  ul {
+    @include flexCenter;
+
+    li {
+      margin-right: 16px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

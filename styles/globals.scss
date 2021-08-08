@@ -1,3 +1,5 @@
+@import "../styles/variables.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -123,4 +125,14 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+a {
+  text-decoration: none;
+  &:visited {
+    color: $black;
+  }
+}
+
+body {
+  background-color: $ivory;
 }

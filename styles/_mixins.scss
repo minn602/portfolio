@@ -1,0 +1,13 @@
+@import "variables";
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin comfortaa($fontSize, $fontWeight, $lineHeight) {
+  font-family: $comfortaa;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+} ;
