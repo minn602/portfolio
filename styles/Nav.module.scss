@@ -2,25 +2,15 @@
 
 .Nav {
   width: 100vw;
-  padding: 20px 24px;
+  padding: 20px 32px;
   @include flexCenter;
   justify-content: space-between;
-  position: fixed;
-  @include comfortaa(13px, 500, 1.38);
+  align-items: flex-start;
+  @include openSans(14px, 400, 21px);
 
-  ul {
-    @include flexCenter;
-
-    li {
-      margin-right: 16px;
-
-      &:hover {
-        cursor: pointer;
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
+  .menubar {
+    &:hover {
+      cursor: pointer;
     }
   }
 }
