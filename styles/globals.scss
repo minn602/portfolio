@@ -136,3 +136,24 @@ a {
 body {
   background-color: $ivory;
 }
+
+@font-face {
+  font-family: "Maharlika";
+  src: url("/fonts/Maharlika/Maharlika-Regular.woff") format(woff);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Now";
+  src: url("/fonts/Now/Now-Regular.woff") format(woff);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Now";
+  src: url("/fonts/Now/Now-Bold.woff") format(woff);
+  font-style: bold;
+  font-weight: 900;
+}

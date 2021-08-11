@@ -10,4 +10,32 @@
   font-size: $fontSize;
   font-weight: $fontWeight;
   line-height: $lineHeight;
-} ;
+}
+
+@mixin openSans($fontSize, $fontWeight, $lineHeight) {
+  font-family: $openSans;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+@mixin notoSans($fontSize, $fontWeight, $lineHeight) {
+  font-family: $notoSans;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+@mixin now($fontSize, $fontWeight, $lineHeight) {
+  font-family: $now;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
+
+@mixin maharlika($fontSize, $fontWeight, $lineHeight) {
+  font-family: $maharlika;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
