@@ -1,0 +1,153 @@
+@import "mixins";
+
+.About {
+  padding: 40px 32px;
+
+  .info {
+    padding: 24px 0 80px;
+    .content {
+      text-align: center;
+      h5 {
+        padding-bottom: 10px;
+        @include now(13px, 500, 1.43);
+        letter-spacing: 2px;
+        border-bottom: 1px solid $black;
+      }
+
+      h3 {
+        padding: 24px 0;
+        @include maharlika(56px, 600, 1.13);
+      }
+    }
+
+    .imgWrapper {
+      position: relative;
+      margin-bottom: 40px;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        background: url("../public/icons/twinkle-multi.svg") center center;
+        background-size: 100%;
+        position: absolute;
+        z-index: 10;
+      }
+
+      &::before {
+        width: 100px;
+        height: 100px;
+        top: 0;
+        left: 10%;
+      }
+
+      &::after {
+        width: 60px;
+        height: 60px;
+        right: 7%;
+        bottom: 5%;
+      }
+    }
+
+    .intro {
+      // padding: 0 40px;
+      @include openSans(16px, normal, 1.43);
+    }
+  }
+
+  .section {
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    h3 {
+      @include maharlika(56px, bold, 1.73);
+      text-stroke: 0.5px $black;
+      -webkit-text-stroke: 0.5px $black;
+      color: $ivory;
+      border-bottom: 1px solid $black;
+
+      // &:hover {
+      //   color: $black;
+      //   transition: color 0.3s ease-in;
+      // }
+    }
+
+    .item {
+      padding: 16px 0;
+      border-bottom: 1px solid $black;
+      // position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .period {
+        @include openSans(14px, normal, 1.33);
+      }
+
+      .exp {
+        h5 {
+          margin-bottom: 4px;
+          @include openSans(24px, bold, 1.33);
+        }
+
+        p {
+          @include openSans(16px, normal, 1.33);
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      // &:after {
+      //   content: "";
+      //   display: block;
+      //   background: url("../public/icons/arrow.svg") center center;
+      //   background-size: 100%;
+      //   width: 16px;
+      //   height: 16px;
+      //   position: absolute;
+      //   top: 50%;
+      //   right: 10px;
+      //   transform: translateY(-50%);
+      // }
+    }
+
+    div {
+      @include openSans(24px, normal, 1.33);
+    }
+
+    .mail {
+      padding: 16px 0;
+      @include maharlika(36px, 700, 1.5);
+    }
+
+    .icons {
+      a {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .contactIcon {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    animation: spin 5000ms infinite linear;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
