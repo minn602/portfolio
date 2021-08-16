@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "../styles/About.module.scss";
-import contact from "../public/icons/contact.svg";
 import profileImg from "../public/images/profile.png";
 import github from "../public/icons/github.svg";
 import blog from "../public/icons/blog.svg";
@@ -50,9 +49,9 @@ const About = () => {
       </section>
       <section className={styles.section}>
         <h3>Projects</h3>
-        <div className={styles.item}>Bearbnb Team Project</div>
-        <div className={styles.item}>Wepicker Team Project</div>
-        <div className={styles.item}>Toy Projects</div>
+        <div className={styles.item}>베어비앤비 팀 프로젝트</div>
+        <div className={styles.item}>위피커 팀 프로젝트</div>
+        <div className={styles.item}>토이 프로젝트</div>
       </section>
       <section className={styles.section}>
         <h3>Other Experience</h3>
@@ -87,14 +86,6 @@ const About = () => {
           </a>
         </div>
       </section>
-      <a
-        target="_blank"
-        href="mailto: minn602@gmail.com"
-        className={styles.contactIcon}
-        rel="noreferrer"
-      >
-        <Image src={contact} width={150} height={150} alt="contact icon" />
-      </a>
     </section>
   );
 };

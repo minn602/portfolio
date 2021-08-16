@@ -1,7 +1,7 @@
 @import "mixins";
 
 .About {
-  padding: 40px 32px;
+  padding: 40px 32px 120px;
 
   .info {
     padding: 24px 0 80px;
@@ -16,7 +16,7 @@
 
       h3 {
         padding: 24px 0;
-        @include maharlika(56px, 600, 1.13);
+        @include maharlika(40px, 600, 1.13);
       }
     }
 
@@ -62,11 +62,12 @@
       margin-bottom: 0;
     }
     h3 {
-      @include maharlika(56px, bold, 1.73);
+      @include maharlika(32px, bold, 1.73);
       text-stroke: 0.5px $black;
       -webkit-text-stroke: 0.5px $black;
       color: $ivory;
       border-bottom: 1px solid $black;
+      // white-space: nowrap;
 
       // &:hover {
       //   color: $black;
@@ -83,17 +84,17 @@
       justify-content: space-between;
 
       .period {
-        @include openSans(14px, normal, 1.33);
+        @include openSans(12px, normal, 1.33);
       }
 
       .exp {
         h5 {
           margin-bottom: 4px;
-          @include openSans(24px, bold, 1.33);
+          @include openSans(18px, bold, 1.33);
         }
 
         p {
-          @include openSans(16px, normal, 1.33);
+          @include openSans(12px, normal, 1.33);
         }
       }
 
@@ -116,12 +117,12 @@
     }
 
     div {
-      @include openSans(24px, normal, 1.33);
+      @include openSans(18px, bold, 1.33);
     }
 
     .mail {
       padding: 16px 0;
-      @include maharlika(36px, 700, 1.5);
+      @include maharlika(24px, 700, 1.5);
     }
 
     .icons {
@@ -130,24 +131,51 @@
       }
     }
   }
-
-  .contactIcon {
-    position: fixed;
-    right: 32px;
-    bottom: 32px;
-    animation: spin 5000ms infinite linear;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: $breakPointTbl) {
+  .About {
+    width: 836px;
+    margin: 0 auto;
+    padding-bottom: 180px;
+
+    .info {
+      .content {
+        h3 {
+          @include maharlika(56px, 600, 1.13);
+        }
+      }
+    }
+
+    .section {
+      h3 {
+        @include maharlika(56px, bold, 1.73);
+      }
+
+      .item {
+        .period {
+          @include openSans(14px, normal, 1.33);
+        }
+
+        .exp {
+          h5 {
+            @include openSans(24px, bold, 1.33);
+          }
+
+          p {
+            @include openSans(16px, normal, 1.33);
+          }
+        }
+      }
+
+      div {
+        @include openSans(24px, bold, 1.33);
+      }
+
+      .mail {
+        padding: 16px 0;
+        @include maharlika(36px, 700, 1.5);
+      }
+    }
   }
 }

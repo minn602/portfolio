@@ -8,9 +8,39 @@
   align-items: flex-start;
   @include openSans(14px, 400, 21px);
 
-  .menubar {
+  .menubar,
+  h1 {
     &:hover {
       cursor: pointer;
+    }
+  }
+
+  .menuList {
+    display: none;
+  }
+}
+
+@media (min-width: $breakPointTbl) {
+  .Nav {
+    .menubar {
+      display: none !important;
+    }
+
+    .menuList {
+      @include flexCenter;
+      @include now(14px, 300, 1.43);
+
+      li {
+        margin-right: 18px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }

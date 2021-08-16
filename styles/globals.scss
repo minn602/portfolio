@@ -158,3 +158,23 @@ body {
   font-style: bold;
   font-weight: 900;
 }
+
+.contactIcon {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  animation: spin 5000ms infinite linear;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

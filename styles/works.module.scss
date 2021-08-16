@@ -1,0 +1,148 @@
+@import "variables";
+@import "mixins";
+
+.Works {
+  padding: 40px 32px 120px;
+  text-align: center;
+
+  .pageName {
+    margin-bottom: 40px;
+    @include maharlika(32px, bold, 1.73);
+    text-stroke: 0.5px $black;
+    -webkit-text-stroke: 0.5px $black;
+    color: $ivory;
+    position: sticky;
+    top: 0;
+    background-color: rgba(250, 243, 221, 0.8);
+    text-align: left;
+    z-index: 1;
+  }
+
+  .exp {
+    margin-bottom: 60px;
+    .companyName {
+      margin-bottom: 16px;
+      @include now(24px, 900, 1.5);
+    }
+
+    .detail {
+      padding: 8px 0;
+      border-top: 1px solid $black;
+      border-bottom: 1px solid $black;
+      @include flexCenter;
+      justify-content: space-between;
+      @include openSans(12px, 300, 1.43);
+    }
+  }
+
+  .aboutProject {
+    margin-bottom: 80px;
+    .projectSrc {
+      margin-bottom: 24px;
+      position: relative;
+      border: 2px solid $black;
+      box-shadow: 4px 4px 0 0 #020202;
+
+      h5 {
+        @include maharlika(32px, bold, 1.7);
+        position: absolute;
+        top: -32px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      // .toy {
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      // }
+    }
+
+    .projectDetail {
+      text-align: left;
+      @include openSans(14px, 300, 1.43);
+
+      .section {
+        margin-bottom: 16px;
+        .title {
+          padding-left: 20px;
+          margin-bottom: 4px;
+          @include maharlika(24px, 500, 1.4);
+          position: relative;
+
+          &::before {
+            content: "";
+            display: block;
+            background: url("../public/icons/twinkle.svg") center center;
+            background-size: 100%;
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        ul {
+          // padding-left: 32px;
+          li {
+            // list-style-type: circle;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $breakPointTbl) {
+  .Works {
+    width: 836px;
+    margin: 0 auto;
+    padding-bottom: 180px;
+
+    .exp {
+      margin-bottom: 80px;
+      .companyName {
+        margin-bottom: 20px;
+        font-size: 36px;
+      }
+
+      .detail {
+        padding: 12px 0;
+        font-size: 14px;
+      }
+    }
+
+    .aboutProject {
+      margin-bottom: 100px;
+
+      .projectSrc {
+        h5 {
+          font-size: 40px;
+        }
+      }
+
+      .projectDetail {
+        font-size: 16px;
+
+        .section {
+          margin-bottom: 24px;
+          .title {
+            font-size: 24px;
+
+            &::before {
+              top: 11px;
+            }
+          }
+        }
+      }
+
+      ul {
+        li {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}

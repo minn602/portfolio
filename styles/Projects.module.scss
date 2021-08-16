@@ -1,0 +1,144 @@
+@import "variables";
+@import "mixins";
+
+.Projects {
+  padding: 40px 32px 120px;
+
+  .pageName {
+    margin-bottom: 40px;
+    @include maharlika(32px, bold, 1.73);
+    text-stroke: 0.5px $black;
+    -webkit-text-stroke: 0.5px $black;
+    color: $ivory;
+    position: sticky;
+    top: 0;
+    background-color: rgba(250, 243, 221, 0.8);
+    z-index: 1;
+  }
+
+  .title {
+    @include maharlika(18px, bold, 1.5);
+    position: relative;
+    padding-left: 16px;
+
+    &::before {
+      content: "";
+      display: block;
+      background: url("../public/icons/twinkle.svg") center center;
+      background-size: 100%;
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .projectItem {
+    margin-bottom: 80px;
+
+    .projectName {
+      @include flexCenter;
+      justify-content: space-between;
+      @include maharlika(24px, 900, 1.5);
+      border-bottom: 2px solid $black;
+
+      .numbering {
+        font-style: italic;
+      }
+    }
+
+    .projectInfo {
+      padding: 8px 0;
+      @include flexCenter;
+      justify-content: space-between;
+      border-bottom: 1px solid $black;
+      @include now(12px, normal, 1.43);
+    }
+    .content {
+      .desc {
+        padding: 12px 0;
+        margin-bottom: 16px;
+        @include now(13px, normal, 1.43);
+
+        a {
+          text-decoration: underline;
+        }
+      }
+
+      .infoDetail {
+        margin-bottom: 40px;
+        @include now(14px, normal, 1.43);
+
+        li {
+          margin-bottom: 4px;
+        }
+      }
+    }
+
+    .media {
+      video {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .github,
+      .blog {
+        padding: 8px 20px;
+        border: 1px solid $black;
+        text-align: center;
+        @include now(14px, 500, 1.5);
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .github {
+        margin-bottom: 10px;
+        position: relative;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 10px;
+          left: 38%;
+          width: 16px;
+          height: 16px;
+          background: url("../public/icons/github.svg") center center;
+          background-size: 100%;
+        }
+      }
+
+      .blog {
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 10px;
+          left: 39%;
+          width: 16px;
+          height: 16px;
+          background: url("../public/icons/blog.svg") center center;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $breakPointTbl) {
+  .Projects {
+    width: 836px;
+    margin: 0 auto;
+    padding-bottom: 180px;
+
+    .projectItem {
+      .content {
+        display: flex;
+      }
+    }
+  }
+}
