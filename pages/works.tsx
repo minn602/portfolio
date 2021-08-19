@@ -12,7 +12,10 @@ const Works = () => {
       <div className={styles.pageName}>Works Experience</div>
       <div>
         <div className={styles.exp}>
-          <h3 className={styles.companyName}>깃 컴퍼니</h3>
+          <div className={styles.companyName}>
+            <div className={styles.numbering}>#01</div>
+            <div>깃 컴퍼니</div>
+          </div>
           <div className={styles.detail}>
             <div>2021.04 ~ 현재</div>
             <div>웹 개발 담당</div>
@@ -40,7 +43,13 @@ const Works = () => {
             </div>
             <div className={styles.section}>
               <div className={styles.title}>Tech Stack</div>
-              React, TypeScript, MobX, Scss
+              React
+              <br />
+              TypeScript
+              <br />
+              MobX
+              <br />
+              Scss
             </div>
             <div className={styles.section}>
               <div className={styles.title}>Details</div>
@@ -92,7 +101,13 @@ const Works = () => {
             </div>
             <div className={styles.section}>
               <div className={styles.title}>Tech Stack</div>
-              React, TypeScript, MobX, Scss
+              React
+              <br />
+              TypeScript
+              <br />
+              MobX
+              <br />
+              Scss
             </div>
             <div className={styles.section}>
               <div className={styles.title}>Details</div>
@@ -112,7 +127,10 @@ const Works = () => {
       </div>
       <div>
         <div className={styles.exp}>
-          <h3 className={styles.companyName}>위티</h3>
+          <div className={styles.companyName}>
+            <div className={styles.numbering}>#02</div>
+            <div>위티</div>
+          </div>
           <div className={styles.detail}>
             <div>2021.02 ~ 2021.03</div>
             <div>웹 개발 담당</div>
@@ -133,7 +151,15 @@ const Works = () => {
             </div>
             <div className={styles.section}>
               <div className={styles.title}>Tech Stack</div>
-              TypeScript, React Hooks, Styled-Components, Storybook, Next.js
+              TypeScript
+              <br />
+              React Hooks
+              <br />
+              Styled-Components
+              <br />
+              Storybook
+              <br />
+              Next.js
             </div>
             <div className={styles.section}>
               <div className={styles.title}>Details</div>

@@ -21,8 +21,15 @@
   .exp {
     margin-bottom: 60px;
     .companyName {
-      margin-bottom: 16px;
+      @include flexCenter;
+      justify-content: space-between;
       @include now(24px, 900, 1.5);
+      border-bottom: 2px solid $black;
+
+      .numbering {
+        font-style: italic;
+        @include maharlika(24px, 900, 1.5);
+      }
     }
 
     .detail {
@@ -65,9 +72,9 @@
       .section {
         margin-bottom: 16px;
         .title {
-          padding-left: 20px;
+          padding-left: 16px;
           margin-bottom: 4px;
-          @include maharlika(24px, 500, 1.4);
+          @include maharlika(18px, bold, 1.5);
           position: relative;
 
           &::before {
@@ -76,10 +83,10 @@
             background: url("../public/icons/twinkle.svg") center center;
             background-size: 100%;
             position: absolute;
-            top: 8px;
+            top: 6px;
             left: 0;
-            width: 16px;
-            height: 16px;
+            width: 10px;
+            height: 10px;
           }
         }
 
@@ -104,7 +111,7 @@
     .exp {
       margin-bottom: 80px;
       .companyName {
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         font-size: 36px;
       }
 
@@ -116,8 +123,10 @@
 
     .aboutProject {
       margin-bottom: 100px;
+      display: flex;
 
       .projectSrc {
+        margin-right: 20px;
         h5 {
           font-size: 40px;
         }
