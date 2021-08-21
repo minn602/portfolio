@@ -33,7 +33,9 @@ const Nav: React.FC<INav> = ({ openMenu, setOpenMenu }) => {
         <Link href="/projects">
           <li>Projects</li>
         </Link>
-        <li>Contact</li>
+        <Link href="/">
+          <li>Contact</li>
+        </Link>
       </ul>
     </nav>
   );

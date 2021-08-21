@@ -5,6 +5,11 @@
   padding: 40px 32px 120px;
   text-align: center;
 
+  a {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
   .pageName {
     margin-bottom: 40px;
     @include maharlika(32px, bold, 1.73);
@@ -16,6 +21,9 @@
     background-color: rgba(250, 243, 221, 0.8);
     text-align: left;
     z-index: 1;
+    opacity: 0;
+    transform: translateY(100%);
+    will-change: opacity transform;
   }
 
   .exp {
@@ -25,6 +33,9 @@
       justify-content: space-between;
       @include now(24px, 900, 1.5);
       border-bottom: 2px solid $black;
+      opacity: 0;
+      transform: translateY(100%);
+      will-change: opacity transform;
 
       .numbering {
         font-style: italic;
@@ -34,21 +45,29 @@
 
     .detail {
       padding: 8px 0;
-      border-top: 1px solid $black;
       border-bottom: 1px solid $black;
       @include flexCenter;
       justify-content: space-between;
       @include openSans(12px, 300, 1.43);
+      opacity: 0;
+      transform: translateY(100%);
+      will-change: opacity transform;
     }
   }
 
   .aboutProject {
     margin-bottom: 80px;
     .projectSrc {
+      width: fit-content;
+      height: fit-content;
       margin-bottom: 24px;
       position: relative;
       border: 2px solid $black;
       box-shadow: 4px 4px 0 0 #020202;
+
+      video {
+        width: 100%;
+      }
 
       h5 {
         @include maharlika(32px, bold, 1.7);
@@ -67,10 +86,14 @@
 
     .projectDetail {
       text-align: left;
-      @include openSans(14px, 300, 1.43);
+      @include now(14px, normal, 1.43);
 
       .section {
         margin-bottom: 16px;
+        opacity: 0;
+        transform: translateY(100%);
+        will-change: opacity transform;
+
         .title {
           padding-left: 16px;
           margin-bottom: 4px;
@@ -108,10 +131,13 @@
     margin: 0 auto;
     padding-bottom: 180px;
 
+    .pageName {
+      @include maharlika(40px, bold, 1.73);
+    }
+
     .exp {
       margin-bottom: 80px;
       .companyName {
-        // margin-bottom: 20px;
         font-size: 36px;
       }
 
@@ -126,6 +152,7 @@
       display: flex;
 
       .projectSrc {
+        width: 50%;
         margin-right: 20px;
         h5 {
           font-size: 40px;
@@ -133,12 +160,14 @@
       }
 
       .projectDetail {
+        width: 50%;
         font-size: 16px;
+        flex-grow: 1;
 
         .section {
           margin-bottom: 24px;
           .title {
-            font-size: 24px;
+            font-size: 20px;
 
             &::before {
               top: 11px;

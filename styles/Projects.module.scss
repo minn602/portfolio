@@ -14,6 +14,9 @@
     top: 0;
     background-color: rgba(250, 243, 221, 0.8);
     z-index: 1;
+    opacity: 0;
+    transform: translateY(100%);
+    will-change: opacity transform;
   }
 
   .title {
@@ -42,6 +45,9 @@
       justify-content: space-between;
       @include maharlika(24px, 900, 1.5);
       border-bottom: 2px solid $black;
+      opacity: 0;
+      transform: translateY(100%);
+      will-change: opacity transform;
 
       .numbering {
         font-style: italic;
@@ -54,12 +60,18 @@
       justify-content: space-between;
       border-bottom: 1px solid $black;
       @include now(12px, normal, 1.43);
+      opacity: 0;
+      transform: translateY(100%);
+      will-change: opacity transform;
     }
     .content {
       .desc {
         padding: 12px 0;
         margin-bottom: 16px;
-        @include now(13px, normal, 1.43);
+        @include now(14px, normal, 1.43);
+        opacity: 0;
+        transform: translateY(100%);
+        will-change: opacity transform;
 
         a {
           text-decoration: underline;
@@ -69,6 +81,9 @@
       .infoDetail {
         margin-bottom: 40px;
         @include now(14px, normal, 1.43);
+        opacity: 0;
+        transform: translateY(100%);
+        will-change: opacity transform;
 
         li {
           margin-bottom: 4px;
@@ -80,6 +95,9 @@
       video {
         width: 100%;
         margin-bottom: 20px;
+        opacity: 0;
+        transform: translateY(100%);
+        will-change: opacity transform;
       }
 
       .github,
@@ -88,6 +106,9 @@
         border: 1px solid $black;
         text-align: center;
         @include now(14px, 500, 1.5);
+        opacity: 0;
+        transform: translateY(100%);
+        will-change: opacity transform;
 
         &:hover {
           cursor: pointer;
@@ -103,7 +124,7 @@
           display: block;
           position: absolute;
           top: 10px;
-          left: 35%;
+          left: 20px;
           width: 16px;
           height: 16px;
           background: url("../public/icons/github.svg") center center;
@@ -118,7 +139,7 @@
           display: block;
           position: absolute;
           top: 10px;
-          left: 36%;
+          left: 20px;
           width: 16px;
           height: 16px;
           background: url("../public/icons/blog.svg") center center;
@@ -135,9 +156,58 @@
     margin: 0 auto;
     padding-bottom: 180px;
 
+    .pageName {
+      @include maharlika(40px, bold, 1.73);
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
     .projectItem {
+      .projectName {
+        font-size: 36px;
+      }
+
+      .projectInfo {
+        font-size: 14px;
+      }
       .content {
+        margin-top: 20px;
         display: flex;
+
+        .desc,
+        .infoDetail {
+          font-size: 16px;
+        }
+      }
+
+      .wrapper {
+        width: 50%;
+        margin-right: 20px;
+      }
+
+      .media {
+        width: 50%;
+        .github,
+        .blog {
+          padding: 12px 24px;
+          font-size: 16px;
+        }
+
+        .github {
+          &::before {
+            top: 14px;
+            left: 30%;
+          }
+        }
+
+        .blog {
+          &::before {
+            top: 14px;
+            left: 31%;
+          }
+        }
       }
     }
   }
