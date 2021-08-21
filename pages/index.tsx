@@ -16,7 +16,11 @@ function Index() {
         <meta property="og:site_name" content="정민선 - 포트폴리오" />
         <meta name="image" property="og:image" content="/icons/logo.svg" />
         <meta property="og:locale" content="ko-KR" />
-        {/* <meta name="url" property="og:url" content="https://www.baconbox.co" /> */}
+        <meta
+          name="url"
+          property="og:url"
+          content="https://minsun.netlify.app/"
+        />
         <meta name="type" property="og:type" content="website" />
         <title>정민선 - 포트폴리오</title>
         <link rel="icon" href="/icons/holssi.svg"></link>
