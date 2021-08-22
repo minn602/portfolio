@@ -55,7 +55,7 @@ const Works = () => {
         <div className={styles.aboutProject}>
           <div className={styles.projectSrc}>
             {/* <Image src={baconbox} alt="baconbox" /> */}
-            <video autoPlay loop>
+            <video autoPlay loop playsInline>
               <source src="/media/baconbox.mp4" type="video/mp4" />
             </video>
             <h5>BACONBOX</h5>
@@ -153,7 +153,7 @@ const Works = () => {
         <div className={styles.aboutProject}>
           <div className={styles.projectSrc}>
             {/* <Image src={collins} alt="collins" /> */}
-            <video autoPlay loop>
+            <video autoPlay loop playsInline>
               <source src="/media/collins.mp4" type="video/mp4" />
             </video>
             <h5>Collins</h5>

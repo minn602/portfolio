@@ -106,7 +106,7 @@ const Projects = () => {
                 }
               }}
             >
-              <video id="pro6" autoPlay loop>
+              <video id="pro6" autoPlay loop playsInline>
                 <source src="/media/bearbnb.mp4" type="video/mp4" />
               </video>
             </VisibilitySensor>
@@ -232,7 +232,7 @@ const Projects = () => {
                 }
               }}
             >
-              <video id="pro13" autoPlay loop>
+              <video id="pro13" autoPlay loop playsInline>
                 <source src="/media/wepicker.mp4" type="video/mp4" />
               </video>
             </VisibilitySensor>
