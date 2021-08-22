@@ -15,13 +15,14 @@ const Nav: React.FC<INav> = ({ openMenu, setOpenMenu }) => {
     <nav className={styles.Nav}>
       <Link href="/">
         <h1>
-          <Image src={logo} alt="minsun portfolio logo" />
+          <Image priority={true} src={logo} alt="minsun portfolio logo" />
         </h1>
       </Link>
       <Image
         onClick={() => setOpenMenu((prev: boolean) => !prev)}
         className={styles.menubar}
         src={menu}
+        priority={true}
         alt="toggle menu"
         width={24}
         height={24}

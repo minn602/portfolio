@@ -41,7 +41,11 @@ const About = () => {
             }}
           >
             <div id="about3" className={styles.imgWrapper}>
-              <Image src={profileImg} alt="minsun profile image" />
+              <Image
+                src={profileImg}
+                priority={true}
+                alt="minsun profile image"
+              />
             </div>
           </VisibilitySensor>
           <div className={styles.intro}>
@@ -141,7 +145,7 @@ const About = () => {
             위피커 팀 프로젝트
           </div>
         </VisibilitySensor>
-        <VisibilitySensor
+        {/* <VisibilitySensor
           partialVisibility={true}
           onChange={(isVisible) => {
             if (isVisible) {
@@ -152,7 +156,7 @@ const About = () => {
           <div id="about10" className={styles.item}>
             토이 프로젝트
           </div>
-        </VisibilitySensor>
+        </VisibilitySensor> */}
       </section>
       <section className={styles.section}>
         <VisibilitySensor
@@ -202,17 +206,35 @@ const About = () => {
         </div>
         <div className={styles.icons}>
           <a target="_blank" href="https://github.com/minn602" rel="noreferrer">
-            <Image src={github} width={40} height={40} alt="github" />
+            <Image
+              priority={true}
+              src={github}
+              width={40}
+              height={40}
+              alt="github"
+            />
           </a>
           <a target="_blank" href="https://minn602.github.io/" rel="noreferrer">
-            <Image src={blog} width={40} height={40} alt="blog" />
+            <Image
+              priority={true}
+              src={blog}
+              width={40}
+              height={40}
+              alt="blog"
+            />
           </a>
           <a
             target="_blank"
             href="https://www.linkedin.com/in/minsun-jung-98775817a/"
             rel="noreferrer"
           >
-            <Image src={linkedin} width={40} height={40} alt="linkedin" />
+            <Image
+              priority={true}
+              src={linkedin}
+              width={40}
+              height={40}
+              alt="linkedin"
+            />
           </a>
         </div>
       </section>

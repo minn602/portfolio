@@ -24,6 +24,7 @@ const HamburgerMenu: React.FC<IHamburgerMenu> = ({ setOpenMenu }) => {
         onClick={() => setOpenMenu((prev: boolean) => !prev)}
         className={styles.close}
         src={close}
+        priority={true}
         alt="toggle menu"
         width={24}
         height={24}

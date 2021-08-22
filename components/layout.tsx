@@ -18,7 +18,13 @@ const Layout: React.FC<{}> = ({ children }) => {
         className="contactIcon"
         rel="noreferrer"
       >
-        <Image src={contact} width={150} height={150} alt="contact icon" />
+        <Image
+          priority={true}
+          src={contact}
+          width={150}
+          height={150}
+          alt="contact icon"
+        />
       </a>
       <Footer />
       {openMenu && <HamburgerMenu setOpenMenu={setOpenMenu} />}
