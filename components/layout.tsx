@@ -19,6 +19,7 @@ const Layout: React.FC<{}> = ({ children }) => {
         rel="noreferrer"
       >
         <Image
+          loading="eager"
           priority={true}
           src={contact}
           width={150}

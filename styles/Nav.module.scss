@@ -10,9 +10,9 @@
 
   .menubar,
   h1 {
-    &:hover {
-      cursor: pointer;
-    }
+    // &:hover {
+    //   cursor: pointer;
+    // }
   }
 
   .menuList {
@@ -37,9 +37,9 @@
           margin-right: 0;
         }
 
-        &:hover {
-          cursor: pointer;
-        }
+        // &:hover {
+        //   cursor: pointer;
+        // }
       }
     }
   }

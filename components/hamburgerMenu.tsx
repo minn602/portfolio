@@ -25,6 +25,7 @@ const HamburgerMenu: React.FC<IHamburgerMenu> = ({ setOpenMenu }) => {
         className={styles.close}
         src={close}
         priority={true}
+        loading="eager"
         alt="toggle menu"
         width={24}
         height={24}

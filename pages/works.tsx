@@ -263,7 +263,7 @@ const Works = () => {
         </div>
         <div className={styles.aboutProject}>
           <div className={styles.projectSrc}>
-            <Image priority={true} src={ziphz} alt="ziphz" />
+            <Image loading="eager" priority={true} src={ziphz} alt="ziphz" />
             <h5>Ziphz</h5>
           </div>
           <div className={styles.projectDetail}>

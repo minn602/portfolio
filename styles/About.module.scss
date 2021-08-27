@@ -2,6 +2,7 @@
 
 .About {
   padding: 40px 32px 120px;
+  overflow-x: hidden;
 
   .info {
     padding: 24px 0 80px;
@@ -66,9 +67,61 @@
       }
     }
 
+    .flowingTextWrapper {
+      width: 100vw;
+      margin-left: -32px;
+      margin-right: -32px;
+      padding: 5px 0;
+      margin-bottom: 40px;
+      border-top: 1px solid $black;
+      border-bottom: 1px solid $black;
+
+      .flowingText {
+        animation: flowing 10s linear infinite;
+        transform: translateX(100%);
+        display: flex;
+        align-items: center;
+
+        div {
+          width: fit-content;
+          padding: 0 24px;
+          margin: 0 10px;
+          @include now(18px, 900, 1.5);
+          position: relative;
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+
+          &:before,
+          &:after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url("../public/icons/blackTwinkle.svg") center center;
+            background-size: 100%;
+            position: absolute;
+          }
+
+          &:before {
+            left: 0;
+          }
+
+          &:after {
+            right: 0;
+          }
+        }
+      }
+    }
+
     .intro {
       // padding: 0 40px;
+      text-align: left;
       @include openSans(16px, normal, 1.43);
+
+      div {
+        margin-bottom: 8px;
+      }
     }
   }
 
@@ -119,10 +172,6 @@
         p {
           @include openSans(12px, normal, 1.33);
         }
-      }
-
-      &:hover {
-        cursor: pointer;
       }
 
       // &:after {
@@ -200,5 +249,11 @@
         @include maharlika(36px, 700, 1.5);
       }
     }
+  }
+}
+
+@keyframes flowing {
+  100% {
+    transform: translateX(-100%);
   }
 }
