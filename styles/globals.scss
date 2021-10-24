@@ -138,10 +138,10 @@ body {
   background-color: $ivory;
 }
 
-html,
-body {
-  cursor: none;
-}
+// html,
+// body {
+//   cursor: none;
+// }
 
 @font-face {
   font-family: "Maharlika";
@@ -170,9 +170,9 @@ body {
   bottom: 65px;
   animation: spin 5000ms infinite linear;
 
-  // &:hover {
-  //   cursor: pointer;
-  // }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 @keyframes spin {

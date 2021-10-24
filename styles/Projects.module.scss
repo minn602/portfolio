@@ -110,9 +110,9 @@
         transform: translateY(100%);
         will-change: opacity transform;
 
-        // &:hover {
-        //   cursor: pointer;
-        // }
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       .github {
