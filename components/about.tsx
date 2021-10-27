@@ -218,6 +218,9 @@ const About = () => {
                 <div className={styles.projectName}>
                   02. 콜린스 UI 개발 및 유지보수
                 </div>
+                <div className={styles.projectStacks}>
+                  React, TypeScript, Scss
+                </div>
                 <div className={styles.projectDesc}>
                   콜린스 브랜드는 새롭게 출시되는 제품의 컨셉과 무드에 맞게 웹
                   사이트의 디자인 개선이 이루어져 홈 섹션 UI 개발과 상세 페이지
