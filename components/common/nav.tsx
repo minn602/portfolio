@@ -11,39 +11,19 @@ interface INav {
 }
 
 const Nav: React.FC<INav> = ({ openMenu, setOpenMenu }) => {
+  const getThisYear = () => {
+    const date = new Date();
+    const year = date.getFullYear();
+
+    return year;
+  };
+
   return (
     <nav className={styles.Nav}>
       <Link href="/">
-        <h1>
-          <Image
-            loading="eager"
-            priority={true}
-            src={logo}
-            alt="minsun portfolio logo"
-          />
-        </h1>
+        <h1>MINSUN JUNG</h1>
       </Link>
-      <Image
-        onClick={() => setOpenMenu((prev: boolean) => !prev)}
-        className={styles.menubar}
-        src={menu}
-        loading="eager"
-        priority={true}
-        alt="toggle menu"
-        width={24}
-        height={24}
-      />
-      <ul className={styles.menuList}>
-        <Link href="/works">
-          <li>Works</li>
-        </Link>
-        <Link href="/projects">
-          <li>Projects</li>
-        </Link>
-        <Link href="/">
-          <li>Contact</li>
-        </Link>
-      </ul>
+      <h1>{getThisYear()}</h1>
     </nav>
   );
 };
