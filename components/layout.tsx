@@ -12,7 +12,7 @@ const Layout: React.FC<{}> = ({ children }) => {
     <>
       <Nav openMenu={openMenu} setOpenMenu={setOpenMenu} />
       <main>{children}</main>
-      <a
+      {/* <a
         target="_blank"
         href="mailto: minn602@gmail.com"
         className="contactIcon"
@@ -26,9 +26,9 @@ const Layout: React.FC<{}> = ({ children }) => {
           height={150}
           alt="contact icon"
         />
-      </a>
+      </a> */}
       <Footer />
-      {openMenu && <HamburgerMenu setOpenMenu={setOpenMenu} />}
+      {/* {openMenu && <HamburgerMenu setOpenMenu={setOpenMenu} />} */}
     </>
   );
 };

@@ -39,3 +39,10 @@
   font-weight: $fontWeight;
   line-height: $lineHeight;
 }
+
+@mixin neue($fontSize, $fontWeight, $lineHeight) {
+  font-family: $neue;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+}
