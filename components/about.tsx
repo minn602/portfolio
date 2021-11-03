@@ -178,7 +178,8 @@ const About = () => {
                   디자인 개선이 가능하고 사이트 전체적으로 속도가 느려 이를
                   개선하여 사용자에게 좋은 구매 경험을 제공하기 위해 웹 사이트
                   전체적으로 리뉴얼 프로젝트가 진행되었습니다. 리액트를 사용하여
-                  전체 웹 사이트의 UI 구현 및 커머스 기능 구현을 담당하였습니다.
+                  전체 웹 사이트의 UI 구현 및 비즈니스 로직 구현을
+                  담당하였습니다.
                 </div>
                 <div className={styles.projectDetail}>
                   <div>
@@ -210,6 +211,15 @@ const About = () => {
                     배웠습니다.
                   </div>
                 </div>
+                <div className={styles.projectSite}>
+                  <a
+                    href="https://www.baconbox.co/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    베이컨박스 웹 사이트
+                  </a>
+                </div>
               </div>
               <div className={`${styles.projectItem} ${styles.collins}`}>
                 <div className={styles.collinsImg}>
@@ -237,6 +247,15 @@ const About = () => {
                     디자인을 적용하였고 이를 구현하기 위해 gsap 라이브러리를
                     사용하여 UI 개발 및 애니메이션 적용을 하였습니다.
                   </div>
+                </div>
+                <div className={styles.projectSite}>
+                  <a
+                    href="https://collinslife.co/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    콜린스 웹 사이트
+                  </a>
                 </div>
               </div>
             </div>

@@ -192,6 +192,27 @@
               padding: 20px 0;
               @include notoSans(16px, normal, 1.4);
             }
+
+            .projectSite {
+              width: 240px;
+              padding: 16px 20px;
+              margin: 16px 0;
+              @include neue(15px, 500, 1.3);
+              text-align: center;
+              border: 1px solid #000000;
+
+              &:hover {
+                cursor: pointer;
+                background-color: #000000;
+
+                transition: background-color 0.3s $Power1EaseIn,
+                  color 0.3s $Power1EaseIn;
+                a {
+                  color: $ivory !important;
+                }
+              }
+            }
+
             .projectStacks {
               font-weight: bold;
             }
