@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import styles from "../styles/About.module.scss";
 import profileImg from "../public/images/profile.svg";
 import github from "../public/icons/github.svg";
@@ -8,106 +7,54 @@ import linkedin from "../public/icons/linkedin.svg";
 import osori from "../public/images/osori.svg";
 import toy from "../public/images/toy.png";
 import arrow from "../public/icons/default-arrow.png";
-// import LocomotiveScroll from "locomotive-scroll";
 import { useEffect, useRef } from "react";
 
 const About = () => {
   const mainSectionRef = useRef(null);
   const mainTextRef = useRef(null);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      mainTextRef.current.classList.add(styles.isReady);
-    }, 300);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    const scroll = import("locomotive-scroll").then((LocomotiveScroll) => {
-      new LocomotiveScroll.default({
-        el: mainSectionRef.current,
-        // smooth: true,
-      });
-    });
-
-    // return () => scroll.destroy();
-  }, []);
 
   return (
-    <section data-scroll ref={mainSectionRef} className={styles.About}>
-      <div ref={mainTextRef} data-scroll className={styles.textWrapper}>
-        <div data-scroll>
+    <section ref={mainSectionRef} className={styles.About}>
+      <div ref={mainTextRef} className={styles.textWrapper}>
+        <div>
           Hi, I&apos;m{" "}
           <span
-            data-scroll
-            data-scroll-speed="3"
-            data-scroll-position="top"
-            data-scroll-delay="0.05"
           >
             M
           </span>
           <span
-            data-scroll
-            data-scroll-speed="5"
-            data-scroll-position="top"
-            data-scroll-delay="0.05"
           >
             i
           </span>
           <span
-            data-scroll
-            data-scroll-speed="4"
-            data-scroll-position="top"
-            data-scroll-delay="0.05"
           >
             n
           </span>
           <span
-            data-scroll
-            data-scroll-speed="3"
-            data-scroll-position="top"
-            data-scroll-delay="0.05"
           >
             s
           </span>
           <span
-            data-scroll
-            data-scroll-speed="5"
-            data-scroll-position="top"
-            data-scroll-delay="0.05"
           >
             u
           </span>
           <span
-            data-scroll
-            data-scroll-speed="3"
-            data-scroll-position="top"
-            data-scroll-delay="0.05"
           >
             n
           </span>
           .
         </div>
-        <div data-scroll data-scroll-speed="3" data-scroll-position="top">
+        <div>
           <span>Front-end</span> Developer
         </div>
-        <div data-scroll data-scroll-speed="3" data-scroll-position="top">
+        <div>
           Based in
         </div>
-        <div data-scroll data-scroll-speed="3" data-scroll-position="top">
+        <div>
           South Korea
         </div>
         <div
-          data-scroll
-          data-scroll-speed="3"
-          data-scroll-position="top"
           className={styles.scrollMark}
         >
           scroll
@@ -116,7 +63,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div data-scroll className={styles.divider} />
+      <div className={styles.divider} />
       <div className={styles.intro}>
         <div>
           <div data-scroll className={styles.introLine}>
@@ -154,16 +101,43 @@ const About = () => {
       <div className={styles.works}>
         <div className={styles.title}>Works experience</div>
         <div className={styles.details}>
-          <div className={styles.item}>
+        <div className={styles.item}>
             <div className={styles.company}>
               <div>
-                <span>01</span>깃 컴퍼니
+                <span>01</span>NHN
               </div>
               <div className={styles.occu}>프론트엔드 개발자</div>
-              <div className={styles.occu}>2021.04 - 현재</div>
+              <div className={styles.occu}>2022.01 - 현재</div>
             </div>
             <div className={styles.projectList}>
               <div className={styles.projectItem}>
+                <div className={styles.projectName}>
+                  01. 어드민 개발
+                </div>
+                <div className={styles.projectStacks}>
+                  React, TypeScript, React-Query, Redux toolkit
+                </div>
+              </div>
+              <div className={styles.projectItem}>
+                <div className={styles.projectName}>
+                  02. 게임 티저 사이트 개발
+                </div>
+                <div className={styles.projectStacks}>
+                  React, TypeScript, React-Query, Recoil, Emotion
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.item}>
+            <div className={styles.company}>
+              <div>
+                <span>02</span>깃 컴퍼니
+              </div>
+              <div className={styles.occu}>프론트엔드 개발자</div>
+              <div className={styles.occu}>2021.04 - 2022.01</div>
+            </div>
+            <div className={styles.projectList}>
+              <div className={`${styles.projectItem} ${styles.bacon}`}>
                 <div className={styles.projectName}>
                   01. 베이컨박스 자사몰 개편 프로젝트
                   <div className={styles.baconImg}>
@@ -263,7 +237,7 @@ const About = () => {
           <div className={styles.item}>
             <div className={styles.company}>
               <div>
-                <span>02</span>위티
+                <span>03</span>위티
               </div>
               <div className={styles.occu}>프론트엔드 개발자 인턴</div>
               <div className={styles.occu}>2021.02 - 2021.03</div>
@@ -424,7 +398,18 @@ const About = () => {
             </div>
             <div>
               <div className={styles.sub}>
-                2020.09 ~ 재학 중 (2022.08 졸업예정)
+                2020.09 ~ 2023.02
+              </div>
+            </div>
+          </div>
+          <div className={styles.item}>
+            <div>
+              SQL 개발자 자격증
+              <div className={styles.sub}>(SQLD)</div>
+            </div>
+            <div>
+              <div className={styles.sub}>
+                2022.09 취득
               </div>
             </div>
           </div>
