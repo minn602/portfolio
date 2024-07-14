@@ -2,14 +2,14 @@ import type { Metadata } from "next"
 import localFont from "next/font/local"
 import "./globals.css"
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Minsun Jung Portfolio",
   icons: {
     icon: "/icon.ico",
   },
 }
 
-export const eiko = localFont({
+const eiko = localFont({
   src: [
     { path: "./_assets/PPEiko-Medium.otf", weight: "400", style: "normal" },
     { path: "./_assets/PPEiko-Heavy.otf", weight: "700", style: "normal" },
@@ -17,7 +17,7 @@ export const eiko = localFont({
   variable: "--font-eiko",
 })
 
-export const mori = localFont({
+const mori = localFont({
   src: [
     {
       path: "./_assets/PPMori-Regular.otf",
