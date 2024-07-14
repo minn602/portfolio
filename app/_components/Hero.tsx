@@ -65,7 +65,7 @@ export default function Hero() {
       <h1 ref={linesRef} className="text-hero font-medium leading-none">
         <div>Hi,</div>
         <div>
-          I'm <span className="font-eiko">Minsun</span>.
+          I&#39;m <span className="font-eiko">Minsun</span>.
         </div>
         <div className="font-eiko">
           <span>Software</span>

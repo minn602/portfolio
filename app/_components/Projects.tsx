@@ -87,7 +87,7 @@ export default function Projects() {
         </>,
         <>
           <div>Payment Integration</div> Implemented a streamlined payment
-          process using 'Xsolla,' a leading global payments solution, to enhance
+          process using &#39;Xsolla&#39;, a leading global payments solution, to enhance
           user convenience and secure transactions.
         </>,
         <>
@@ -110,7 +110,7 @@ export default function Projects() {
         <>
           <div>Architectural Design</div> Designed and implemented a robust MVC
           (Model-View-Controller) architecture pattern to enhance developer
-          efficiency and maintainability of the website's codebase.
+          efficiency and maintainability of the website&#39;s codebase.
         </>,
       ],
     },

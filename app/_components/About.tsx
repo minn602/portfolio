@@ -117,8 +117,8 @@ export default function About() {
         </span>
         <div className="h-7" />
         <span>
-          Feel free to explore my portfolio to see the projects I've worked on
-          and the solutions I've crafted. Let's connect and see how we can
+          Feel free to explore my portfolio to see the projects I&#39;ve worked on
+          and the solutions I&#39;ve crafted. Let&#39;s connect and see how we can
           create something amazing together! 💫💫
         </span>
       </div>
