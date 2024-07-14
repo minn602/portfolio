@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text-color: 255, 252, 225;
+  --background-color: 14, 16, 15;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: 14, 16, 15;
+    --background-color: 255, 252, 225;
+  }
+}
+
+* {
+  cursor: none;
+}
+
+body {
+  color: rgb(var(--text-color));
+  background-color: rgb(var(--background-color));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  @screen lg {
+    .overflow-unset-lg {
+      overflow: unset;
+    }
+  }
+}
+
+@layer utilities {
+  .custom-border::before {
+    height: calc(100% * 2 / 3 + 30px);
+  }
+}
