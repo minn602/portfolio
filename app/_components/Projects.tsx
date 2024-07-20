@@ -1,9 +1,9 @@
 "use client"
 import Image from "next/image"
 import Star from "../_assets/star.png"
-import { useState } from "react"
+import { Dispatch, SetStateAction, useState } from "react"
 
-export default function Projects() {
+export default function Projects({setIsHovered}: {setIsHovered: Dispatch<SetStateAction<boolean>>}) {
   const [selected, setSelected] = useState("pebblecity")
 
   const projects = [
@@ -217,6 +217,8 @@ export default function Projects() {
             <li
               key={p.id}
               onClick={() => setSelected(p.id)}
+              onMouseEnter={() => selected !== p.id ? setIsHovered(true) : undefined}
+              onMouseLeave={() => selected !== p.id ? setIsHovered(false) : undefined}
               className="py-7 border-y"
             >
               <div className="pl-24px relative text-title font-medium before:content-[''] before:block before:absolute before:top-[6px] before:left-[4px] before:w-2.5 before:h-2.5 before:bg-white before:rounded-full">

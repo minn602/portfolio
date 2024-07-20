@@ -19,7 +19,7 @@ pink: '#FE90AF',
       },
       fontSize: {
         hero: 'calc(60px + (120 - 60) * (100vw - 400px) / (1600 - 400))',
-        section: 'calc(40px + (110 - 40) * ( 100vw - 400px ) / (1600 - 400))',
+        section: 'calc(40px + (80 - 40) * ( 100vw - 400px ) / (1600 - 400))',
         title: 'calc(18px + (24 - 18) * ( 100vw - 400px ) / (1600 - 400));',
         content: 'calc(15px + (21 - 15) * ( 100vw - 400px ) / (1600 - 400));'
       },

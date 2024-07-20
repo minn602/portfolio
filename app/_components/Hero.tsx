@@ -41,7 +41,7 @@ export default function Hero() {
         gsap.to(span, {
           scrollTrigger: {
             trigger: linesRef.current,
-            start: `top ${steps[index] * 5}%`,
+            start: `top ${steps[index] * 8}%`,
             toggleActions: "play none none reverse",
           },
           backgroundImage: gradients[index % gradients.length],
@@ -61,7 +61,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="px-24px max-h-screen flex flex-col justify-center lg:max-w-5xl lg:mx-auto">
+    <section className="py-20 px-24px flex flex-col justify-center lg:max-w-5xl lg:mx-auto">
       <h1 ref={linesRef} className="text-hero font-medium leading-none">
         <div>Hi,</div>
         <div>
