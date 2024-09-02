@@ -1,15 +1,15 @@
 "use client"
 import { useEffect, useRef, useState } from "react"
 import About from "./_components/About"
-import CustomCursor from "./_components/CustomCursor"
 import Experience from "./_components/Experience"
 import Footer from "./_components/Footer"
 import Header from "./_components/Header"
 import Hero from "./_components/Hero"
-import Other from "./_components/Other"
+import Education from "./_components/Education"
 import Projects from "./_components/Projects"
 import useMousePosition from "./utils/useMousePosition"
 import gsap from "gsap"
+import Other from "./_components/Other"
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
@@ -34,12 +34,13 @@ export default function Home() {
 
   return (
       <main className="h-fit relative">
-      <div ref={maskRef} className="mask">Click !</div>
+      <div ref={maskRef} className="mask"></div>
         <Header />
         <Hero />
-        <About />
+        <About setIsHovered={setIsHovered} />
         <Experience />
         <Projects setIsHovered={setIsHovered} />
+        <Education />
         <Other />
         <Footer />
       </main>

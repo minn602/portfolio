@@ -16,14 +16,13 @@ export default function Projects({setIsHovered}: {setIsHovered: Dispatch<SetStat
             target="_blank"
             className="underline"
           >
-            Game Name
+            {/* Game Name */}
           </a>{" "}
           WEB3 Social Casino Game Administration Website
         </div>
       ),
       desc: `I developed both the frontend and backend
-      of an administration website for 
-      “Game Name”, a web3 social casino game targeting the United States market.  This platform provides comprehensive management functionalities crucial for overseeing game operations and enhancing player engagement.`,
+      of an administration website for a web3 social casino game targeting the United States market.  This platform provides comprehensive management functionalities crucial for overseeing game operations and enhancing player engagement.`,
       stacks: [
         "React",
         "TypeScript",
@@ -68,16 +67,16 @@ export default function Projects({setIsHovered}: {setIsHovered: Dispatch<SetStat
       title: (
         <div>
           <a
-            //  href="https://wooparoo.hangame.com/"
+             href="https://wooparoo.hangame.com/"
             target="_blank"
             className="underline"
           >
-            Game Name
+            Wooparoo Odyssey
           </a>{" "}
           Official Website
         </div>
       ),
-      desc: `I led the development of the official website for “Game Name”, a popular social network game. The website serve as a comprehensive platform featuring game introduction, pre-registration and pre-sale events, and NFT(Non-Fungible Token) item market.`,
+      desc: `I led the development of the official website for “Wooparoo Odyssey”, a popular social network game. The website serve as a comprehensive platform featuring game introduction, pre-registration and pre-sale events, and NFT(Non-Fungible Token) item market.`,
       stacks: ["React", "TypeScript", "React-Query", "Recoil", "Emotion.js"],
       features: [
         <>
@@ -219,7 +218,7 @@ export default function Projects({setIsHovered}: {setIsHovered: Dispatch<SetStat
               onClick={() => setSelected(p.id)}
               onMouseEnter={() => selected !== p.id ? setIsHovered(true) : undefined}
               onMouseLeave={() => selected !== p.id ? setIsHovered(false) : undefined}
-              className="py-7 border-y"
+              className={`py-7 border-y ${selected !== p.id ? "cursor-pointer" : ""}`}
             >
               <div className="pl-24px relative text-title font-medium before:content-[''] before:block before:absolute before:top-[6px] before:left-[4px] before:w-2.5 before:h-2.5 before:bg-white before:rounded-full">
                 {p.title}

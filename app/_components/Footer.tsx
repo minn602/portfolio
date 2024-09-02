@@ -21,15 +21,16 @@ export default function Footer() {
       </div>
       <div className="flex items-center gap-x-1 mt-7 mb-7 lg:max-w-5xl lg:mx-auto lg:mt-16">
         <a
+        className="cursor-pointer"
           target="_blank"
-          href="https://www.linkedin.com/in/minsun-jung-98775817a/"
+          href="https://www.linkedin.com/in/minsunjung/"
         >
           <Image src={LinkedIn} width={48} height={48} alt="Linked in" />
         </a>
-        <a target="_blank" href="https://github.com/minn602">
+        <a         className="cursor-pointer" target="_blank" href="https://github.com/minn602">
           <Image src={Github} width={48} height={48} alt="Github" />
         </a>
-        <a href="mailto:cindyminsun@gmail.com">
+        <a         className="cursor-pointer" href="mailto:cindyminsun@gmail.com">
           <Image src={Google} width={40} height={40} alt="Google" />
         </a>
       </div>

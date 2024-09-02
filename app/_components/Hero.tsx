@@ -72,7 +72,7 @@ export default function Hero() {
         </div>
         <div>Engineer</div>
         <div>
-          Based in <span className="font-eiko">Seoul</span>.
+          Based in <span style={{paddingBottom: "25px", display: "inline-block"}} className="font-eiko">England</span>.
         </div>
       </h1>
       <Image

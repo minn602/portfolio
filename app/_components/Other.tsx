@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Shape from "../_assets/shape1.png"
+import Shape from "../_assets/shape4.png"
 
 export default function Other() {
   return (
@@ -18,18 +18,14 @@ export default function Other() {
       </div>
       <ul className="mt-7 lg:mt-16 text-content leading-normal">
         <li className="mb-7">
-          <div className="text-title">Korea National Open University</div>
-          <div>Bachelor of Science in Computer Science</div>
-          <div>Sep 2020 ~ Feb 2023</div>
-        </li>
-        <li className="mb-7">
-          <div className="text-title">Wecode Coding Bootcamp</div>
-          <div>Dec 2020 ~ Mar 2021</div>
+          <div className="text-title">AWS Certified Developer – Associate (DVA)</div>
+          <div>Amazon Web Services (AWS)</div>
+          <div>Issued Aug 2024 · Expires Aug 2027</div>
         </li>
         <li>
           <div className="text-title">SQL Developer Certification</div>
           <div>KOREA Data Agency</div>
-          <div>2022</div>
+          <div>Issued Sep 2022</div>
         </li>
       </ul>
     </section>

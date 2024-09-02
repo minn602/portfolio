@@ -1,9 +1,9 @@
 "use client"
 import Image from "next/image"
 import Shape from "../_assets/ellipse.png"
-import { useEffect, useRef } from "react"
+import { Dispatch, SetStateAction, useEffect, useRef } from "react"
 
-export default function About() {
+export default function About({setIsHovered}: {setIsHovered: Dispatch<SetStateAction<boolean>>}) {
   const contentsRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
@@ -36,8 +36,28 @@ export default function About() {
     "RTK",
     "Java",
     "Spring Boot",
+    "JUnit",
     "SQL",
+    "AWS",
+    "CI/CD",
+    "Jenkins"
   ]
+
+  const handleDownload = async () => {
+    const response = await fetch('/api/download-cv');
+    if (response.ok) {
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(new Blob([blob]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'CV_Minsun Jung.docx'); // 파일 이름 설정
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode!.removeChild(link);
+    } else {
+      console.error('Fail to download');
+    }
+  }
 
   return (
     <section className="mb-16 lg:max-w-5xl lg:mx-auto lg:mb-[110px]">
@@ -80,20 +100,6 @@ export default function About() {
         </ul>
       </div>
       <div className="py-24px text-content leading-normal mb-7 w-3/4 mx-auto">
-        {/* <span>
-          With over three years of hands-on experience in web application
-          development, I'm a seasoned frontend developer adept at crafting
-          dynamic and user-friendly interfaces. Having navigated both frontend
-          and backend realms, I possesses a comprehensive understanding of the
-          web development lifecycle.
-        </span>
-        <div className="h-7" />
-        <span>
-          Specializing in frontend technologies, I am proficient in utilizing
-          React.js to create robust and scalable applications for production
-          environments. I am passionate about translating design concepts into
-          intuitive user interfaces that enhance user experience and engagement.
-        </span> */}
         <span>
           I am an experienced frontend developer with over three years of
           professional experience in designing and developing dynamic,
@@ -122,7 +128,7 @@ export default function About() {
           create something amazing together! 💫💫
         </span>
       </div>
-      <div className="w-fit text-title py-2 px-10 leading-normal mx-auto border border-white rounded-[50px] flex items-center justify-center">
+      <div onClick={handleDownload} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-fit text-title py-2 px-10 leading-normal mx-auto border border-white rounded-[50px] flex items-center justify-center cursor-pointer">
         Check CV
       </div>
     </section>
