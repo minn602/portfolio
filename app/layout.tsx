@@ -2,8 +2,9 @@ import type { Metadata } from "next"
 import localFont from "next/font/local"
 import "./globals.css"
 
-const metadata: Metadata = {
+export const metadata: Metadata = {
   title: "Minsun Jung Portfolio",
+  description: "Software Engineer Minsun Jung based in England",
   icons: {
     icon: "/icon.ico",
   },
