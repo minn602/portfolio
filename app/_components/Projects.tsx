@@ -1,10 +1,10 @@
-"use client"
-import Image from "next/image"
-import Star from "../_assets/star.png"
-import { Dispatch, SetStateAction, useState } from "react"
+"use client";
+import Image from "next/image";
+import Star from "../_assets/star.png";
+import { Dispatch, SetStateAction, useState } from "react";
 
-export default function Projects({setIsHovered}: {setIsHovered: Dispatch<SetStateAction<boolean>>}) {
-  const [selected, setSelected] = useState("pebblecity")
+export default function Projects() {
+  const [selected, setSelected] = useState("pebblecity");
 
   const projects = [
     {
@@ -67,7 +67,7 @@ export default function Projects({setIsHovered}: {setIsHovered: Dispatch<SetStat
       title: (
         <div>
           <a
-             href="https://wooparoo.hangame.com/"
+            href="https://wooparoo.hangame.com/"
             target="_blank"
             className="underline"
           >
@@ -86,8 +86,8 @@ export default function Projects({setIsHovered}: {setIsHovered: Dispatch<SetStat
         </>,
         <>
           <div>Payment Integration</div> Implemented a streamlined payment
-          process using &#39;Xsolla&#39;, a leading global payments solution, to enhance
-          user convenience and secure transactions.
+          process using &#39;Xsolla&#39;, a leading global payments solution, to
+          enhance user convenience and secure transactions.
         </>,
         <>
           <div>Social Integration</div> Integrated social login and sharing
@@ -182,7 +182,7 @@ export default function Projects({setIsHovered}: {setIsHovered: Dispatch<SetStat
         </>,
       ],
     },
-  ]
+  ];
 
   const color = {
     React: "bg-[#6FD6FF]",
@@ -194,7 +194,7 @@ export default function Projects({setIsHovered}: {setIsHovered: Dispatch<SetStat
     "Spring Boot": "bg-[#A9F1DF]",
     Scss: "bg-[#FFBBBB]",
     Mobx: "bg-[#A890FE]",
-  }
+  };
 
   return (
     <section className="p-24px mb-16 lg:max-w-5xl lg:mx-auto lg:mb-[110px]">
@@ -210,17 +210,15 @@ export default function Projects({setIsHovered}: {setIsHovered: Dispatch<SetStat
           Selected Projects
         </h3>
       </div>
-      <ul className="mt-7 text-content leading-normal">
+      <ul className="mt-7 leading-normal text-lg">
         {projects.map((p) => {
           return (
             <li
               key={p.id}
               onClick={() => setSelected(p.id)}
-              onMouseEnter={() => selected !== p.id ? setIsHovered(true) : undefined}
-              onMouseLeave={() => selected !== p.id ? setIsHovered(false) : undefined}
               className={`py-7 border-y ${selected !== p.id ? "cursor-pointer" : ""}`}
             >
-              <div className="pl-24px relative text-title font-medium before:content-[''] before:block before:absolute before:top-[6px] before:left-[4px] before:w-2.5 before:h-2.5 before:bg-white before:rounded-full">
+              <div className="customLi pl-24px relative text-xl font-bold  before:content-[''] before:block before:absolute before:top-[6px] before:left-[4px] before:w-2.5 before:h-2.5 before:bg-black before:rounded-full">
                 {p.title}
               </div>
               <div
@@ -237,7 +235,7 @@ export default function Projects({setIsHovered}: {setIsHovered: Dispatch<SetStat
                       >
                         {s}
                       </div>
-                    )
+                    );
                   })}
                 </div>
                 <div className="mb-5">{p.desc}</div>
@@ -246,18 +244,18 @@ export default function Projects({setIsHovered}: {setIsHovered: Dispatch<SetStat
                     return (
                       <li
                         key={i}
-                        className="mb-4 pl-[1em] relative before:absolute before:content-[''] before:block before:w-1 before:h-1 before:top-[8px] before:left-[4px] before:bg-white before:rounded-full"
+                        className="customLi mb-4 pl-[1em] relative before:absolute before:content-[''] before:block before:w-1 before:h-1 before:top-[8px] before:left-[4px] before:bg-black before:rounded-full"
                       >
                         {f}
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>
             </li>
-          )
+          );
         })}
       </ul>
     </section>
-  )
+  );
 }

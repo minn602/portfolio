@@ -1,5 +1,5 @@
-import Image from "next/image"
-import Shape from "../_assets/shape4.png"
+import Image from "next/image";
+import Shape from "../_assets/shape4.png";
 
 export default function Other() {
   return (
@@ -16,18 +16,20 @@ export default function Other() {
           Other Experience
         </h3>
       </div>
-      <ul className="mt-7 lg:mt-16 text-content leading-normal">
+      <ul className="mt-7 lg:mt-16 text-lg leading-normal">
         <li className="mb-7">
-          <div className="text-title">AWS Certified Developer – Associate (DVA)</div>
+          <div className="text-xl font-bold">
+            AWS Certified Developer – Associate (DVA)
+          </div>
           <div>Amazon Web Services (AWS)</div>
           <div>Issued Aug 2024 · Expires Aug 2027</div>
         </li>
         <li>
-          <div className="text-title">SQL Developer Certification</div>
+          <div className="text-xl font-bold">SQL Developer Certification</div>
           <div>KOREA Data Agency</div>
           <div>Issued Sep 2022</div>
         </li>
       </ul>
     </section>
-  )
+  );
 }

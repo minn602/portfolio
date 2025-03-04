@@ -1,13 +1,14 @@
-"use client"
-import Image from "next/image"
-import Shape from "../_assets/ellipse.png"
-import { Dispatch, SetStateAction, useEffect, useRef } from "react"
+"use client";
+import Image from "next/image";
+import Shape from "../_assets/ellipse.png";
+import { Dispatch, SetStateAction, useEffect, useRef } from "react";
+import Link from "next/link";
 
-export default function About({setIsHovered}: {setIsHovered: Dispatch<SetStateAction<boolean>>}) {
-  const contentsRef = useRef<HTMLSpanElement>(null)
+export default function AboutSection() {
+  const contentsRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
-    const contents = contentsRef.current?.querySelectorAll("span")
+    const contents = contentsRef.current?.querySelectorAll("span");
 
     if (contents) {
       gsap.fromTo(
@@ -19,10 +20,10 @@ export default function About({setIsHovered}: {setIsHovered: Dispatch<SetStateAc
           duration: 1.5,
           ease: "power4.out",
           stagger: 0.3,
-        },
-      )
+        }
+      );
     }
-  }, [])
+  }, []);
 
   const stacks = [
     "React",
@@ -40,24 +41,8 @@ export default function About({setIsHovered}: {setIsHovered: Dispatch<SetStateAc
     "SQL",
     "AWS",
     "CI/CD",
-    "Jenkins"
-  ]
-
-  const handleDownload = async () => {
-    const response = await fetch('/api/download-cv');
-    if (response.ok) {
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(new Blob([blob]));
-      const link = document.createElement('a');
-      link.href = url;
-      link.setAttribute('download', 'CV_Minsun Jung.docx'); // 파일 이름 설정
-      document.body.appendChild(link);
-      link.click();
-      link.parentNode!.removeChild(link);
-    } else {
-      console.error('Fail to download');
-    }
-  }
+    "Jenkins",
+  ];
 
   return (
     <section className="mb-16 lg:max-w-5xl lg:mx-auto lg:mb-[110px]">
@@ -73,17 +58,17 @@ export default function About({setIsHovered}: {setIsHovered: Dispatch<SetStateAc
           About
         </h3>
       </div>
-      <div className="overflow-hidden overflow-unset-lg">
+      <div className=" overflow-unset-lg text-lg">
         <ul className="flex gap-1 whitespace-nowrap animate-marquee mb-2">
           {stacks.map((s) => {
             return (
               <li
                 key={s}
-                className="inline-block text-lg font-bold px-5 w-fit bg-white text-black rounded-full"
+                className="stack inline-block font-semibold px-5 w-fit bg-black text-white rounded-full"
               >
                 {s}
               </li>
-            )
+            );
           })}
         </ul>
         <ul className="flex gap-1 whitespace-nowrap animate-marqueeR">
@@ -91,15 +76,15 @@ export default function About({setIsHovered}: {setIsHovered: Dispatch<SetStateAc
             return (
               <li
                 key={s}
-                className="inline-block text-lg font-bold px-5 w-fit bg-white text-black rounded-full"
+                className="stack inline-block font-semibold px-5 w-fit bg-black text-white rounded-full"
               >
                 {s}
               </li>
-            )
+            );
           })}
         </ul>
       </div>
-      <div className="py-24px text-content leading-normal mb-7 w-3/4 mx-auto">
+      <div className="py-24px leading-normal mb-7 w-3/4 mx-auto text-lg">
         <span>
           I am an experienced frontend developer with over three years of
           professional experience in designing and developing dynamic,
@@ -123,14 +108,19 @@ export default function About({setIsHovered}: {setIsHovered: Dispatch<SetStateAc
         </span>
         <div className="h-7" />
         <span>
-          Feel free to explore my portfolio to see the projects I&#39;ve worked on
-          and the solutions I&#39;ve crafted. Let&#39;s connect and see how we can
-          create something amazing together! 💫💫
+          Feel free to explore my portfolio to see the projects I&#39;ve worked
+          on and the solutions I&#39;ve crafted. Let&#39;s connect and see how
+          we can create something amazing together! 💫💫
         </span>
       </div>
-      <div onClick={handleDownload} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="w-fit text-title py-2 px-10 leading-normal mx-auto border border-white rounded-[50px] flex items-center justify-center cursor-pointer">
-        Check CV
-      </div>
+      <Link
+        target="_blank"
+        href="https://drive.google.com/file/d/15wrM7XBSAzsr23_bCdUk17RbG4K3_wNP/view?usp=drive_link"
+      >
+        <div className="w-fit py-2 px-10 leading-normal mx-auto border rounded-[50px] flex items-center justify-center font-eiko italic font-medium text-lg cursor-pointer">
+          Check CV
+        </div>
+      </Link>
     </section>
-  )
+  );
 }
