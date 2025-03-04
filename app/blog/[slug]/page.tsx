@@ -3,6 +3,9 @@ import { getAllPostSlugs, getPostBySlug, renderMDX } from "@/lib/mdx";
 
 export async function generateStaticParams() {
   const posts = getAllPostSlugs();
+  if (posts.length === 0) {
+    return [{ slug: "placeholder" }];
+  }
   return posts;
 }
 
