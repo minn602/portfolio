@@ -79,8 +79,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="max-w-[343px] md:max-w-[800px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
             <PostGrid
-              date=""
-              title=""
+              title="My Journey as a Frontend Developer"
+              date="2025-03-06"
+              slug="My-Journey-as-a-Frontend-Developer"
               background="linear-gradient(90deg, rgba(198,234,141,1) 0%, rgba(254,144,175,1) 100%)"
               grid="col-span-2 row-span-2 lg:row-span-1 aspect-square lg:aspect-[2/1]"
             />

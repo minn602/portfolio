@@ -22,7 +22,7 @@ export default function PostGrid({
         background,
       }}
     >
-      <Link href={slug ? slug : "/"}>
+      <Link href={slug ? `/blog/${slug}` : "/"}>
         <div
           className={`${date ? "block" : "hidden"} p-1 absolute top-6 right-6 text-sm text-white bg-black`}
         >
