@@ -7,7 +7,7 @@ import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Minsun Jung | Frontend Engineer",
-  description: "Frontend Engineer Minsun Jung based in England",
+  description: "Frontend Engineer Minsun Jung based in London",
   icons: {
     icon: "/icon.ico",
   },

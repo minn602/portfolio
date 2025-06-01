@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LinkArrow from "./LinkArrow";
 
 type TPostGrid = {
   date?: string;
@@ -22,16 +23,19 @@ export default function PostGrid({
         background,
       }}
     >
-      <Link href={slug ? `/blog/${slug}` : "/"}>
-        <div
-          className={`${date ? "block" : "hidden"} p-1 absolute top-6 right-6 text-sm text-white bg-black`}
-        >
-          {date}
-        </div>
+      <div>
         <h3 className="text-xl text-black font-bold tracking-tight md:text-lg">
           {title}
         </h3>
-      </Link>
+        {slug && (
+          <LinkArrow
+            href={`/blog/${slug}`}
+            className="absolute bottom-6 right-6 text-sm text-black opacity-80 hover:opacity-100"
+          >
+            Read more
+          </LinkArrow>
+        )}
+      </div>
     </div>
   );
 }

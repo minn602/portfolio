@@ -72,9 +72,14 @@ export default function Home() {
         </LinkArrow>
       </section>
       <section className="lg:w-2/3">
-        <h2 className="text-2xl font-eiko font-bold tracking-tight md:text-4xl mb-6">
-          Featured Posts
-        </h2>
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-2xl font-eiko font-bold tracking-tight md:text-4xl">
+            Featured Posts
+          </h2>
+          <LinkArrow href="/blog" className="opacity-80 hover:opacity-100">
+            Read all posts
+          </LinkArrow>
+        </div>
 
         <div className="max-w-7xl mx-auto">
           <div className="max-w-[343px] md:max-w-[800px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -86,6 +91,9 @@ export default function Home() {
               grid="col-span-2 row-span-2 lg:row-span-1 aspect-square lg:aspect-[2/1]"
             />
             <PostGrid
+              title="Frontend Testing Frameworks in 2025"
+              date=""
+              slug="Frontend-Testing-Frameworks-in-2025"
               background="linear-gradient(0deg, rgba(0,183,255,1) 0%, rgba(255,255,199,1) 100%)"
               grid="col-span-2 aspect-[2/1] md:col-span-1 md:aspect-square"
             />
@@ -131,9 +139,6 @@ export default function Home() {
             />
           </div>
         </div>
-        <LinkArrow href="/blog" className="mt-8 opacity-80 hover:opacity-100">
-          Read all posts
-        </LinkArrow>
       </section>
     </main>
   );
