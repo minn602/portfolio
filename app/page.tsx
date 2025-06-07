@@ -120,6 +120,9 @@ export default function Home() {
               rotation={[Math.PI / 4, 0, 0]}
             />
             <PostGrid
+              title="Frontend Performance Optimization with Real Practice"
+              date=""
+              slug="Frontend-Performance-Optimization-with-Real-Practice"
               background="linear-gradient(0deg, rgba(191,240,152,1) 0%, rgba(111,214,255,1) 100%)"
               grid="col-span-2 row-span-2 aspect-square lg:row-span-1 lg:aspect-[2/1]"
             />
