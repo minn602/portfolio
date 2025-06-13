@@ -127,6 +127,9 @@ export default function Home() {
               grid="col-span-2 row-span-2 aspect-square lg:row-span-1 lg:aspect-[2/1]"
             />
             <PostGrid
+              title="Zustand A Modern State Management Solution"
+              date=""
+              slug="Zustand-A-Modern-State-Management-Solution"
               background="radial-gradient(circle, rgba(234,141,141,1) 0%, rgba(168,144,254,1) 100%)"
               grid="col-span-2 row-span-2 aspect-square md:row-span-1 md:aspect-[2/1] lg:col-span-1 lg:aspect-square"
             />
